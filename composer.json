@@ -1,0 +1,46 @@
+{
+    "name": "laravel-enso/files",
+    "description": "File manager dependency for Laravel Enso",
+    "keywords": [
+        "laravel-enso",
+        "files",
+        "file-manager",
+        "file-uploader"
+    ],
+    "homepage": "https://github.com/laravel-enso/files",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrian Ocneanu",
+            "email": "aocneanu@gmail.com",
+            "homepage": "https://laravel-enso.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "laravel-enso/core": "4.6.*",
+        "laravel-enso/helpers": "1.14.*",
+        "laravel-enso/image-transformer": "1.5.*",
+        "laravel-enso/migrator": "1.0.*",
+        "laravel-enso/track-who": "1.8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelEnso\\Files\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelEnso\\Files\\AppServiceProvider",
+                "LaravelEnso\\Files\\AuthServiceProvider",
+                "LaravelEnso\\Files\\FileServiceProvider",
+                "LaravelEnso\\Files\\UploadServiceProvider"
+            ],
+            "aliases": {
+                "FileBrowser": "LaravelEnso\\Files\\app\\Facades\\FileBrowser"
+            }
+        }
+    }
+}
